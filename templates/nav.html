@@ -1,0 +1,27 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/nav.css' %}">
+<div class="wrapper">
+    <div class="cabeza">
+        
+    
+        <div class="element logo">
+            <div class="imgContainer">
+                <img src=" {% static 'images/logo3.png' %}" alt="">
+            </div>
+        </div>
+        <div class="element menu">
+            <a href="{% url "home" %}"><div class="btn home">Home</div></a>
+            <a href="{% url "projects" %}"><div class="btn proyectos">Proyectos</div></a>
+         
+            <a href="{% url "about" %}"><div class="btn nosotros">Sobre Nosotros</div></a>
+            <a href="{% url "contact" %}"><div class="btn contacto">Contacto</div></a>
+            <a href="{% url "convivienda" %}"><div class="btn convivienda">Convivienda</div></a>
+            <div class="numeroContainer">
+                <a href="tel:504278538444">Llamar: 2785-3844</a><span class="icon-phone"></span>
+                </div>
+                <span id="burgerButton" class="icon-list burger-button" ></span>
+        </div>
+    </div>
+
+</div>
+<script src="{% static 'js/main.js' %}"></script>

@@ -1,0 +1,134 @@
+{% extends 'base2.html' %}
+
+{% load static %}
+
+{% block headcontent %}
+  <title>Proyectos - Platinum Group</title>
+  <link rel="stylesheet" href="{% static 'css/navigation/projects.css' %}">
+{% endblock headcontent %}
+
+{% block container %}
+<body id="body">
+    
+
+    
+
+<div class="relleno"></div>
+<div class="descripcionProyectos" ">
+    <div class="logosYTema">
+        <div class="logovf">
+                <img src="{% static 'images/logo vf.png' %}" alt="Logo Villa Florencia" srcset="">
+            </div>
+    <h2>
+        RESIDENCIAL VILLA FLORENCIA
+    </h2>
+    <div class="logoConvivienda">
+            <img src="{% static 'images/convivienda.png' %}" alt="" srcset="">
+        </div>
+    </div>
+    <div class="imagenesVF">
+        <div class="imgVF des1">
+            <img src="{% static 'images/des2.jpg' %}" alt="" srcset="">
+        </div>
+        <div class="imgVF des2">
+            <img src="{% static 'images/des1.jpg' %}" alt="">
+
+        </div>
+    </div>
+    <div class="modelosDis">
+        <div class="tema">
+            <h2>Modelos Disponibles</h2>
+        </div>
+        <div class="modelos">
+            <div class="overlay" id="overlay">
+                <div class="cerrar">
+                    <span class="icon-cross" id="close"></span>  
+                </div>
+                
+                    <div class="modal" id="modal"></div>
+            </div>
+            <div class="milan modelo" style="background-image: url({% static 'images/milan.jpg' %});">
+                <div class="over">
+                        <div class="icons">
+                                <div class="icon enlarge" id="enlarge">
+                                    <span class="icon-enlarge red" id="cerrar"></span>
+                                </div>
+                                <div class="icon plus" id="plus">
+                                    <a href="{% url 'milan' %}"><span class="icon-plus red"></span></a>
+                                </div>
+                            </div>
+                    <h1>Modelo Milan</h1>
+                    <div></div> 
+                    <!-- Div de relleno -->
+                </div>
+
+            </div>
+            <div class="siena modelo" style="background-image: url({% static 'images/Siena.jpg' %});">
+                    <div class="over">
+                        <div class="icons">
+                            <div class="icon">
+                                <span class="icon-enlarge red" id="mostrarSiena"></span>
+                            </div>
+                            <div class="icon">
+                                <a href="{% url 'siena' %}"><span class="icon-plus red"></span></a>
+                            </div>
+                        </div>
+                        <h1>Modelo Siena</h1>
+                        <div></div> 
+                        <!-- Div de relleno -->
+                    </div>
+            </div>
+            <div class="catania modelo" style="background-image: url({% static 'images/catania.jpg' %});">
+                <div class="over">
+                        <div class="icons">
+                                <div class="icon">
+                                    <span class="icon-enlarge red" id="mostrarCatania"></span>
+                                </div>
+                                <div class="icon">
+                                    <a href="{% url 'catania' %}"><span class="icon-plus red"></span></a>
+                                </div>
+                            </div>
+                    <h1>Modelo Catania</h1>
+                    <div></div> 
+                    <!-- Div de relleno -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="ubicacion">
+        <div class="tema">
+            <h2>Ubicación</h2>
+
+        </div>
+        <h4><b>Dirección:</b> a 900 metros del désvio a los juzgados, al par de iglesia MAAM.</h3>
+            <div class="llamada">
+               
+                <h4> <a href="tel:504278538444">Llamar para agendar una cita</a></h4>
+            </div>
+        <div class="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7719.594536729457!2d-86.20140984661863!3d14.66744353636978!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa5a11c0cf1a5190b!2sResidencial%20Villa%20Florencia!5e0!3m2!1ses!2shn!4v1571672817315!5m2!1ses!2shn" width="100%" height="600" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </div>
+    </div>
+    <div class="descripcion">
+        <h2>Descripción del Proyecto</h2>
+        <h4><b>Descripción General</b></h4>
+        <p>Villa Florencia cuenta con todos los servicios básicos; agua potable, alcantarillado sanitario, energia eléctrica y calles internas del proyecto pavimentadas.</p>
+        <h4><b>Objetivo General</b></h4>
+        <p>Tener a la disposicion de la población Olanchana un proyecto habitacional que cuenta con viviendas dignas y de buena calidad con precios accesibles a familias luchadoras y escasos ingresos.</p>
+        <h4><b>Objetivos especificos</b></h4>
+        <ol>
+            <li>Promover el desarrollo urbano en Juticalpa, con las condiciones urbanisticas adecuadas y manteniendo la debida protección del medio ambiente.</li>
+            <li>disminuir el déficit habitacional, colocando a la orden de familias viviendas dignas a precios accesibles a su economía.</li>
+            <li>Mejorar las condiciones de vida de las familias de escasos recursos, el cual constituye el mayor grupo poblacional de Juticalpa.</li>
+        </ol>
+        <h4><b>Misión</b></h4>
+        <p>Proporcionar un servicio de cálidad para mejorar el bienestar social y económico, brindando servicios integrados en el diseño, desarrollo y construcción de proyectos utilizando sistemas constructivos innovadores y ofreciendo los mejores precios y accesibilidad de financiamiento y de esa manera colocarnos entre las principales empresas reconocidas por brindar un mayor aporte a la sociedad garantizando la satisfaccion de nuestros clientes.</p>
+        <h4><b>Visión</b></h4>
+        <p>Posicionarnos como líderes en el campo de la construcción evolucionando constantemente nuestros servicios para ofrecer la mas óptima calidad y los mejores costos en lo que a construcción se refiere y por ese medio colocarnos entre las empresas que brindan un mayor aporte a la mejoria de las condiciones de vida y económicas de nuestra sociedad.</p>
+    </div>
+</div>
+<script src="{% static 'js/proyecto.js' %}"></script>
+
+</body>
+{% endblock container %}

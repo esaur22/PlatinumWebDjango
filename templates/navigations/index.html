@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+
+{% block head_content %}
+  <title>Platinum Group</title>
+  {% load static %}
+  <link href="https://fonts.googleapis.com/css?family=Poppins|Rubik&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/navigation/index.css' %}">
+{% endblock head_content %}
+
+<div class="madre">
+
+
+
+    {% block container %}
+<div class="imagePortada" id="imagePortada" style="background-image: url({% static 'images/portada3.jpg' %});">
+    <div class="wrapper">
+    <div class="portada">
+    {% include "nav.html" %}
+        
+        <div class="form">
+            <div class="dataRequest">
+                <h3>Dejanos Llamarte</h3>
+                <p>Te ayudaremos a escoger tu hogar</p>
+                <form action="{% url 'home' %}" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="name" id="nombre" placeholder="Su Nombre">
+                    <label for="numero">Número de telefono</label>
+                    <input type="tel" name="phone" id="numero" placeholder="Su Número">
+                    <label for="mensaje">Mensaje (opcional)</label>
+                    <textarea name="mensaje" id="mensaje" cols="10" rows="2" placeholder="Su Mensaje"></textarea>
+                    <button type="submmit" value="Enviar" id="enviar">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</div>
+</div>
+
+<div class="imgFondo" style="background-image: url({% static 'images/primeraBajada1.png' %});">
+    <div class="wrapper">
+        <div class="contenido">
+            <div class="logosYTema">
+                <div class="logovf">
+                    
+                    <img src="{% static 'images/logo vf.png' %}" alt="Logo Villa Florencia" srcset="">
+                </div>
+                <div class="tema">
+                <p>Escoge tu hogar</p>
+            </div>
+                    
+                <div class="logoConvivienda">
+                    <img src="{% static 'images/convivienda.png' %}" alt="" srcset="">
+                </div>
+            </div>
+            <div class="modelos">
+                  
+                <div class="siena modelo">
+                       
+                    <div class="sienaImg modeloImg">
+                        <img src="{% static 'images/Siena.jpg' %}" alt="Modelo Siena" srcset="">
+                    </div>
+                    <div class="sienaText descripcionCasa">
+                        <h3><a href="{% url 'siena' %}">Modelo Siena</a></h3>
+                        <p>Compra este modelo con una hermosa fachada clásica, reservalo ahora!!</p>
+                    </div>
+                    <div class="grilla">
+                            <div class="elemento 1"><p>Habitaciones</p></div>
+                            <div class="elemento 2"><p>Baños</p></div>
+                            <div class="elemento 3"><p>Tamaño</p></div>
+                            <div class="elemento 4 iconP"><span class="icon-sleepy"></span><p>2</p></div>
+                            <div class="elemento 5 iconP"><span class="icon-man-woman"></span><p>1</p></div>
+                            <div class="elemento 6 iconP"><span class="icon-codepen"></span><p>70 mts&sup2;</p></div>
+                        </div>
+                </div>
+                
+                <div class="milan modelo">
+                    <div class="milanImg modeloImg">
+                        <img src="{% static 'images/milan.jpg' %}" alt="Modelo Milan" srcset="">
+                    </div>
+                    <div class="milanText descripcionCasa">
+                        <h3><a href="{% url 'milan' %}">Modelo Milan</a></h3>
+                        <p>Disfruta de un diseño minimalista y amplio en Villa Florencia, escoge este acogedor modelo</p>
+                    </div>
+                <div class="grilla">
+                    <div class="elemento 1"><p>Habitaciones</p></div>
+                    <div class="elemento 2"><p>Baños</p></div>
+                    <div class="elemento 3"><p>Tamaño</p></div>
+                    <div class="elemento 4 iconP"><span class="icon-sleepy"></span><p>2</p></div>
+                    <div class="elemento 5 iconP"><span class="icon-man-woman"></span><p>1</p></div>
+                    <div class="elemento 6 iconP"><span class="icon-codepen"></span><p>70 mts&sup2;</p></div>
+                </div>
+    
+                </div>
+                    <div class="catania modelo">
+                        <div class="cataniaImg modeloImg">
+                            <img src="{% static 'images/catania.jpg' %}" alt="Modelo catania" srcset="">
+                        </div>
+                        <div class="cataniaText descripcionCasa">
+                            <h3><a href="{% url 'catania' %}">Modelo Catania</a></h3>
+                            <p>Disfruta del modelo mas acogedor y destacado de Villa Florencia, modelo que aprovecha al maximo el espacio con su conveniente distribución</p>
+                        </div>
+                        <div class="grilla">
+                                <div class="elemento 1"><p>Habitaciones</p></div>
+                                <div class="elemento 2"><p>Baños</p></div>
+                                <div class="elemento 3"><p>Tamaño</p></div>
+                                <div class="elemento 4 iconP"><span class="icon-sleepy"></span><p>2</p></div>
+                                <div class="elemento 5 iconP"><span class="icon-man-woman"></span><p>1</p></div>
+                                <div class="elemento 6 iconP"><span class="icon-codepen"></span><p>70 mts&sup2;</p></div>
+                            </div>
+                </div>
+            </div>
+        </div>
+            
+    </div>
+    
+</div>
+
+
+   
+<div class="comen wrapper">
+<div class="contenido2">
+        <div class="grillaComen">
+            <div class="comentarios grid">
+                <div class="contenedor">
+                    <div class="testimoniosTema">
+                        <h3>Comentarios</h3>
+                    </div>
+                </div>
+                <div class="comentariosCli">
+                    <h4>Jessica García</h4>
+                    <h5>Diseñadora Gráfica</h5>
+                    <p>"Gracias a Dios por sus bendiciones, por abirir puertas, y gracias a esta empresa por haber hecho uno de nuestros sueños realidad. Excelente trabajo. Infinitas gracias Platinum Group"</p>
+                </div>
+            </div>
+            <div class="adquirido grid">
+                <div class="modeloObtenido obtenidoCata">
+                    <h3>Modelo Obtenido</h3>
+                        <div class="catania modeloAd">
+                                <div class="cataniaImg modeloImg">
+                                    <img src="{% static 'images/jessica.jpg' %}" alt="Modelo catania" srcset="" height="">
+                                </div>
+                                <div class="cataniaAd descripcionCasa">
+                                    <h3><a href="{% url 'catania' %}">Modelo Catania</a></h3>
+                                </div>
+                              
+                        </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+</div>
+    
+    <script src="{% static 'js/index.js' %}"></script>
+    
+    {% endblock container %}

@@ -1,0 +1,61 @@
+{% extends 'base2.html' %}
+{% load static %}
+
+{% block headcontent %}
+  <title>Contacto - Platinum Group</title>
+  <link rel="stylesheet" href="{% static 'css/navigation/contact.css' %}">
+{% endblock headcontent %}
+
+{% block container %}
+<div class="relleno"><h1>Contáctenos</h1></div>
+<div class="fondo fadeInUp ">
+    <div class="wrapper ">
+        
+       <div class="formDatos">
+           <div class="form">
+               <form action="">
+                   <label for="Name">Nombre</label>
+                   <input type="text" name="Name" id="Name" placeholder="Escriba su nombre">
+                   <label for="email">Correo Electronico</label>
+                   <input type="email" name="email" id="email" placeholder="Escriba su correo">
+                   <label for="phone">Numero de telefono</label>
+                   <input type="tel" name="phone" id="phone" placeholder="Esciba su numero telefonico">
+                   <label for="message">Mensaje</label>
+                   <textarea name="message" id="message" cols="30" rows="10" placeholder="¿Como podemos ayudarle?"></textarea>
+                   <input type="submit" value="Enviar" id="submit">
+               </form>
+           </div>
+           <div class="datos">
+               <div class="phoneConjun conjunto">
+                   <div class="iconContainer">
+                        <span class="icon-phone"></span> <p>Numero de Telefono</p>
+                   </div>
+                   <div class="phoneContainer dato"><a href="tel:504278538444">2785-3844</a></div>
+                </div>
+               <div class="mobileConjun conjunto">
+                    <div class="iconContainer">
+                            <span class="icon-mobile"></span><p>Celular</p>
+                       </div>
+                       <div class="mobileContainer dato"><a href="tel:50495512926">95512926</a></div>
+               </div>
+               <div class="emailConjun conjunto">
+                    <div class="iconContainer">
+                            <span class="icon-envelop"></span><p>Email</p>
+                       </div>
+                       <div class="emailContainer dato"><a href="mailto:platinumgroup545@yahoo.com">platinumgroup545@yahoo.com</a></div>
+               </div>
+               <div class="addressConjun conjunto">
+                    <div class="iconContainer">
+                            <span class="icon-location"></span><p>Nuestra ubicación</p>
+                       </div>
+                       <div class="addressContainer dato"><a href="https://goo.gl/maps/rPjuD4C5ALjHgaGp9">Boulevard Los Poetas, entre 4ta y 5ta avenida, <br/>media cuadra al este de Banhcafe, Juticalpa, Olancho.</a></div>
+               </div>
+           </div>
+       </div>
+       <div class="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.841154044777!2d-86.21851028479068!3d14.664954389761544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6c1fa8247e3825%3A0x73f66e91d42e12bc!2sPlatinum%20Group!5e0!3m2!1ses!2shn!4v1572370136112!5m2!1ses!2shn" width="92%" height="100%" frameborder="0" style="border: 1px solid rgba(0, 0, 0, 0.4);" allowfullscreen></iframe>
+    </div>
+    </div>
+
+</div>
+{% endblock container %}

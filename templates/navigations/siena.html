@@ -1,0 +1,133 @@
+{% extends 'base2.html' %}
+{% load static %}
+
+{% block headcontent %}
+<title>Modelo Siena - Platinum Group</title>
+<link rel="stylesheet" href="{% static 'css/navigation/siena.css' %}">   
+{% endblock headcontent %}
+
+
+{% block container %}
+    <body id="body">
+        
+    </body>
+<div class="tema fadeIn"><h2>Modelo Siena</h2></div>
+<div class="wrapper">
+    <div class="slice fadeInUp">
+        <div class="temaSlice"><p>Escoge el color que mas te guste</p></div>
+        <div class="boxSliceContainer">
+                <div class="flechaIz contenedorFle" id="flechaIz">
+                        <span class="icon-arrow-left"></span>
+                    </div>
+            <div class="boxSlice" id="boxSlice" >
+            </div>
+            <div class="flechaDe contenedorFle" id="flechaDe">
+                    <span class="icon-arrow-right"></span>
+            </div>
+
+        </div>
+    </div>
+    <div class="interior">
+       <h2>Interior</h2>
+       <div class="fotos">
+        <div class="overlay" id="overlay">
+            <div class="cerrar">
+                <span class="icon-cross" id="close"></span>  
+            </div>
+            
+                <div class="modal" id="modal"></div>
+        </div>
+            <div class="imageDiv imageDiv1">
+                <div class="imagContainer">
+                        <span class="icon-zoom-in abrir"></span>
+                </div>
+           </div>
+           <div class="imageDiv imageDiv2">
+                <div class="imagContainer">
+                        <span class="icon-zoom-in abrir"></span>
+                </div>
+           </div>
+           <div class="imageDiv imageDiv3">
+                <div class="imagContainer">
+                        <span class="icon-zoom-in abrir"></span>  
+                </div>
+           </div>
+        
+       
+            <div class="imageDiv imageDiv4">
+                <div class="imagContainer">
+                        <span class="icon-zoom-in abrir"></span>
+            </div>
+            </div>
+       
+        </div>
+       </div>
+       <div class="especificaciones">
+           <h2>Especificaciones</h2>
+           <div class="container">
+               <div class="blanco"><p>METROS CUADRADOS:                               27</p></div>
+               <div class="gris"><p>HABITACIONES:                               2</p></div>
+               <div class="blanco"><p>GARAGE: Para 1 vehiculo, techado.</p></div>
+               <div class="gris"><p>BAÑOS:                               1(mts)</p></div>
+               <div class="blanco"><p>COCINA: Con doble lavamanos, desayunador de bloque con superficie de cerámica</p></div>
+               <div class="gris"><p>COMEDOR:                mts</p></div>
+                <div class="blanco"><p>TECHO: Lamina de Aluzinc sobre cielo falso</p></div>
+                                 
+           </div>
+       </div>
+       
+       <div class="RePreFi">
+           <h2>Requisitos, Precio y Financiamiento</h2>
+           <div class="requisitos">
+               <p>¿Como obtenerlo?</p>
+               <p>Requisitos:</p>
+               <ul>
+                   <li>Constancia de trabajo (incluyendo salario sin deducciones, antigüedad, puesto y número de teléfono para confirmar la constancia.</li>
+                   <li>Tarjeta de identidad (Copia en grande).</li>
+                   <li>RTN (Copia en grande).</li>
+               </ul>
+
+           </div>
+           <div class="precio">
+               <p>Precio y Financiamiento:</p>
+                    <p><b>Precio: L.705,000 </b></p>
+                    <p>Platinum Group te ofrece 2 tipos de financiamiento:</p>
+                <ol>
+                    <b><li>Financiamiento bancario:</b> Pueden aplicar todas las personas que residan legalmente en Honduras, Estados Unidos y Canadá.</li>
+                   <p class="up unido ">Tasa de interés: 9.7% anual (la tasa de interés mas baja que existe).</p>
+                   <p class="unido">Cuota Mensual: L. 5,900 (Cuota aplicada al subsidio de 115,000 lempiras).</p>
+                   <p class="unido">Prima: L. 60,000</p>
+                   <p class="unido down">Plazo: 20 años </p>
+                   <b><li>Financiamiento directo:</b> Pueden aplicar todas las personas indistintamente del país de residencia. Esta opción es ideal para que personas que viven en el extranjero apliquen a un modelo pagándolo en un máximo de 14 meses.</li>
+               </ol>
+               <p>¿Tienes una pregunta? <a href="tel:504278538444">LLamar a Platinum Group</a> </p>
+           </div>
+       </div>
+       <div class="enlaces">
+            <div class="conju1">
+                <div class="iconRegre iconNextPre">
+                     <a href="{% url 'projects' %}"><span class="icon-circle-left"></span></a>
+                </div>
+                <div class="regresar">
+                    <p class="grisSuave"><a href="{% url 'projects' %}">anterior</a></p>
+                    <p><a href="{% url 'projects' %}">Regresar a Proyectos</a></p>
+                 </div>
+                 
+            </div>
+        
+            <div class="conju2">
+                 
+                 <div class="siguiente">
+                     <p class="grisSuave final"><a href="{% url 'catania' %}">Siguiente</a></p>
+                     <p class="final2"><a href="{% url 'catania' %}">Modelo Catania</a></p>
+                  </div>
+                  <div class="iconSigui iconNextPre">
+                         <a href="{% url 'catania' %}"><span class="icon-circle-right"></span></a>
+                    </div>
+                  
+             </div>
+     </div>
+    </div>
+    <script src="{% static 'js/siena.js' %}"></script>
+{% endblock container %}
+    
