@@ -13,15 +13,16 @@
         
        <div class="formDatos">
            <div class="form">
-               <form action="">
+               <form action="{% url 'contact' %}" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
                    <label for="Name">Nombre</label>
-                   <input type="text" name="Name" id="Name" placeholder="Escriba su nombre">
+                   <input type="text" name="name" id="Name" placeholder="Escriba su nombre">
                    <label for="email">Correo Electronico</label>
                    <input type="email" name="email" id="email" placeholder="Escriba su correo">
                    <label for="phone">Numero de telefono</label>
                    <input type="tel" name="phone" id="phone" placeholder="Esciba su numero telefonico">
                    <label for="message">Mensaje</label>
-                   <textarea name="message" id="message" cols="30" rows="10" placeholder="¿Como podemos ayudarle?"></textarea>
+                   <textarea name="commentary" id="message" cols="30" rows="10" placeholder="¿Como podemos ayudarle?"></textarea>
                    <input type="submit" value="Enviar" id="submit">
                </form>
            </div>

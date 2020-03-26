@@ -28,7 +28,20 @@ def about(request):
     return render(request, 'navigations/about.html')    
 
 def contact(request):
-    return render(request, 'navigations/contact.html')    
+        # client = Client
+    if request.method == 'POST':
+        form = ClientForm(request.POST)
+
+        if form.is_valid():
+            form.save()
+
+            return redirect('catania')
+    else:
+
+        form = ClientForm()
+
+  
+    return render(request, 'navigations/contact.html', {'form':form})    
 
 def convivienda(request):
     return render(request, 'navigations/convivienda.html')    
