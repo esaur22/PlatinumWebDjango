@@ -1,0 +1,29 @@
+{% extends 'base2.html' %}
+{% load static %}
+{% block headcontent %}
+  <title>Post - Platinum Group</title>
+    <link rel="stylesheet" href="{% static 'css/navigation/posts.css' %}">
+{% endblock headcontent %}
+
+{% block container %}
+<h1 id="tema">Posts</h1>
+<div class="container">
+    {% for post in posts %}
+    <div class="postContainer">
+        <div class="imagContainer">
+            <img src="{{ post.image.url }}" alt="" >
+        </div>
+        <div class="name">
+            <h2>{{post.name}}</h2>
+        </div>
+        <div class="descripcion">
+            <p>{{post.contenido}}</p>
+        </div>
+
+    </div>
+
+    {% endfor %}
+
+</div>
+  
+{% endblock container %}

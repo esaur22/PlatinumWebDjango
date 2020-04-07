@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/navigation/login.css' %}">
+    <title>Login - Platinum Group</title>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <div class="formContainer">
+            <div class="imgContainer">
+                <img src="{%static 'images/logo3.png'%}" alt="">
+
+            </div>    
+            {% if error %}
+                <div>
+                    <p class="alert alert-danger">{{ error }}</p>
+                </div>
+            {% endif %}
+            <form action="{% url 'login' %}" method="POST">
+                {% csrf_token %}
+                
+                    
+                <input type="text" placeholder="Username" name="username">
+                <input type="password" placeholder="Password" name="password">
+                <button type="submmit" value="Enviar" id="enviar">Iniciar Sesión</button>
+
+            </form>
+
+        </div>
+    </div>
+
+</body>
+</html>

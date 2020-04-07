@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/navigation/postcontroller.css' %}">
+    <title>Post Controller - Platinum Group</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <h1>Controlador de Posts</h1>
+            <a href="{% url 'logout' %}" id="logout">Salir</a>
+            
+        </div>
+
+        <div class="post">
+
+            
+                <div class="formContainer">
+                    <h3>Crear Nuevo Post</h3>
+                    <form action="{% url 'postcontroller' %}" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <input type="text" placeholder="Nombre" name="name">
+                        
+                        <input type="file" placeholder="Seleccionar imagen" name="image">
+                        <textarea name="contenido" id="" placeholder="Contenido" cols="40" rows="10"></textarea>
+                        <input type="submit" value="Enviar" id="submit">
+                       
+                        
+
+                    </form>
+
+                </div>
+
+        </div>
+
+        
+    </div>
+</body>
+</html>
