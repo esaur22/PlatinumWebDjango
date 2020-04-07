@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 from clients.forms import ClientForm
 from django.http import HttpResponseRedirect
 from clients.models import Client
@@ -14,7 +14,7 @@ def home(request):
         if form.is_valid():
             form.save()
 
-            return redirect('catania')
+            return render(request, 'navigations/index.html', {'mensaje':'Información recibida, te contactaremos pronto'})
     else:
 
         form = ClientForm()
@@ -35,7 +35,7 @@ def contact(request):
         if form.is_valid():
             form.save()
 
-            return redirect('catania')
+            return render(request, 'navigations/contact.html', {'mensaje':'Informacion recibida'})
     else:
 
         form = ClientForm()

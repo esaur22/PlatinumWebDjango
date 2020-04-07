@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from clients.views import home, projects, about, contact, convivienda, milan, siena, catania
+from posts.views import postcontroller, posts
+from users.views import login_view, logout_view
 
 from django.conf.urls.static import static
 from django.conf import settings
@@ -30,5 +32,15 @@ urlpatterns = [
     path('about/', about, name = 'about'),
     path('contact/', contact, name = 'contact'),
     path('convivienda/', convivienda, name = 'convivienda'),
+    path('login/', login_view, name = 'login'),
+    path('postcontroller/', postcontroller, name = 'postcontroller'),
+    path('logout/', logout_view, name = 'logout'),
+    path('posts/', posts, name = 'posts'),
+
     
-] 
+    
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)#Le suma al urlpattern una url estatica, con el valor de la media que tenemos y donde estamos parados en la media
+
+admin.site.site_header = "PLATINUM BASE"
+admin.site.site_title = "PLATINUM BASE"
+admin.site.index_title = "Bienvenidos al panel de administracion de PLATINUM BASE "

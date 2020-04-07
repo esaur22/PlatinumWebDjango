@@ -15,14 +15,33 @@
            <div class="form">
                <form action="{% url 'contact' %}" method="POST" enctype="multipart/form-data">
                     {% csrf_token %}
+                    
+                    
+                    
+                        
+                        
                    <label for="Name">Nombre</label>
                    <input type="text" name="name" id="Name" placeholder="Escriba su nombre">
-                   <label for="email">Correo Electronico</label>
-                   <input type="email" name="email" id="email" placeholder="Escriba su correo">
+                   {% for error in form.name.errors  %}
+                        <div class="alert alert-danger">
+                            <b>Nombre: </b>{{ error }}
+                        </div>
+                    {% endfor %}
                    <label for="phone">Numero de telefono</label>
                    <input type="tel" name="phone" id="phone" placeholder="Esciba su numero telefonico">
+                   {% for error in form.phone.errors  %}
+                        <div class="alert alert-danger">
+                            <b>Telefono: </b>{{ error }}
+                        </div>
+                    {% endfor %}
                    <label for="message">Mensaje</label>
                    <textarea name="commentary" id="message" cols="30" rows="10" placeholder="¿Como podemos ayudarle?"></textarea>
+                   {% for error in form.commentary.errors  %}
+                        <div class="alert alert-danger">
+                            <b>Comentario: </b>{{ error }}
+                        </div>
+                    {% endfor %}
+
                    <input type="submit" value="Enviar" id="submit">
                </form>
            </div>
@@ -59,4 +78,12 @@
     </div>
 
 </div>
+
+{% if mensaje %}
+<script>
+alert('Informacion Recibida, te contactaremos pronto!!')    
+</script>
+    
+{% endif %}
+    
 {% endblock container %}

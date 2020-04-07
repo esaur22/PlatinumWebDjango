@@ -39,7 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     ##Local Apps
-    'clients'
+    'clients',
+    'users',
+    'posts',
+    'interesados'
 ]
 
 MIDDLEWARE = [
@@ -79,10 +82,14 @@ WSGI_APPLICATION = 'platinumWeb.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    'default':{
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'clients',
+        'USER': 'postgres',
+        'PASSWORD': 'Kikito1997',
+        'HOST': 'localhost',
+        'PORT': '5432',
+}
 }
 
 
@@ -108,7 +115,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-eu'
 
 TIME_ZONE = 'UTC'
 
@@ -127,3 +134,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') #BASE_DIR es nuestro directorio, y le decimos que dentro de nuestro directorio busque media
+MEDIA_URL = '/media/'#lo que va despues del url normal
+
+LOGIN_URL = '/login/'

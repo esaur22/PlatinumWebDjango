@@ -26,10 +26,25 @@
 
                     <label for="nombre">Nombre</label>
                     <input type="text" name="name" id="nombre" placeholder="Su Nombre">
+                    {% for error in form.name.errors  %}
+                        <div class="alert alert-danger">
+                            <b>Name: </b>{{ error }}
+                        </div>
+                    {% endfor %}
                     <label for="numero">Número de telefono</label>
                     <input type="tel" name="phone" id="numero" placeholder="Su Número">
+                    {% for error in form.phone.errors  %}
+                        <div class="alert alert-danger">
+                            <b>Telefono: </b>{{ error }}
+                        </div>
+                    {% endfor %}
                     <label for="mensaje">Mensaje (opcional)</label>
                     <textarea name="commentary" id="mensaje" cols="10" rows="2" placeholder="Su Mensaje"></textarea>
+                    {% for error in form.commentary.errors  %}
+                        <div class="alert alert-danger">
+                            <b>Name: </b>{{ error }}
+                        </div>
+                    {% endfor %}
                     <button type="submmit" value="Enviar" id="enviar">Enviar</button>
                 </form>
             </div>
@@ -155,7 +170,12 @@
 
 </div>
 </div>
+{% if mensaje %}
+<script>
+alert('Informacion Recibida, te contactaremos pronto!!')    
+</script>
     
+{% endif %}
     <script src="{% static 'js/index.js' %}"></script>
     
     {% endblock container %}
