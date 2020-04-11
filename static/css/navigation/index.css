@@ -177,7 +177,7 @@
 }
 .imgFondo{
 
-    background-image: url('static/images/primeraBajada1.png');
+    background-image: url('../../images/primeraBajada1.png');
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
