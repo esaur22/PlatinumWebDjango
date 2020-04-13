@@ -1,0 +1,118 @@
+:root{
+    --color-naranja:#48dbfb;
+    --color-azul:#00367C;
+    --paddind-inputs:10px 15px;
+    --fuente:'Poppins', sans-serif;
+    --tamano-modelos: 400px;
+    --blanco:#FFFFFF;
+    --gris-descripcion:#B3B3B3;
+    --gris-oscuro:#444444;
+    --gris-suave:#F7F7F7;
+    /* --verde-hover:#117E4A; */
+    --verde-hover:#1dd1a1;
+    
+}
+
+
+footer{
+    background-color: #303030;
+    color: #808080;
+    
+}
+.info{
+    width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.imgContainerPla img{
+    width: 120px;
+}
+.distriDatos{
+    display: flex;
+    margin-top: 5px;
+}
+.distriDatos a{
+    margin-left: 6px;
+    color: #808080;
+    text-decoration: none;
+}
+.distriDatos p{
+    margin: 0;
+    margin-left: 6px;
+}
+.distriDatos span{
+    margin-top: 3px;
+}
+.facebook{
+    font-size: 40px;
+}
+.facebook a{
+    text-decoration: none;
+    color: #808080;
+}
+.facebook:hover{
+    font-size: 45px;
+    transition: .2s all ease-in-out;
+
+}
+.facebook span:hover{
+    color: white;
+    cursor: pointer;
+}
+.whatsapp a{
+    cursor: auto;
+}
+
+@media screen and (max-width:1440px) {
+    .info{
+        max-width: 90vw;
+    }
+}
+@media screen and (max-width:1024px) {
+
+  .info{
+      width: 100vh;
+  }
+  .info p, .info a{
+      font-size: 13px;
+  }
+  .facebook a{
+      font-size: 35px;
+  }
+  }
+  
+  @media screen and (max-width:768px) {
+
+  .info{
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+  .contacto{
+      padding-left: 10px;
+  }
+  .facebook a{
+      font-size: 30px;
+  }
+  
+  }
+  @media screen and (max-width:695px) {
+
+      .imgContainer img{
+          max-height: 80%;
+      }
+      .imgContainerPla{
+          height: 80px;
+      }
+      .imgContainerPla img{
+          max-height: 95px;
+          max-width: 80px;
+          
+      }
+      
+  }
+
+  @media screen and (max-width:480px) {
+      
+  }
+  @media screen and (max-width:320px) {}

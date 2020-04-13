@@ -1,0 +1,537 @@
+:root{
+    --color-naranja:#48dbfb;
+    --color-azul:#00367C;
+    --paddind-inputs:10px 15px;
+    --fuente:'Poppins', sans-serif;
+    --tamano-modelos: 400px;
+    --blanco:#FFFFFF;
+    --gris-descripcion:#B3B3B3;
+    --gris-oscuro:#444444;
+    --gris-suave:#F7F7F7;
+    --verde-hover:#1dd1a1;
+    
+}
+.wrapper{
+    width: 1400px;
+    margin: 0 auto;
+   
+}
+
+.imagePortada{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size:100% ; 
+    background-position: center;
+    margin: 0 auto;
+  
+    
+
+}
+.portada{
+    
+    width: 100%;
+    height: 75vh;
+    
+   }
+   .cabeza{
+    display: grid;
+    grid-template: 100px / 20% 80%;
+    grid-template-areas:'logo menu' 
+                        ;
+
+}
+
+.element{
+    
+}
+
+.cabeza{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.alert-danger{color:#721c24;background-color:#f8d7da;border-color:#f5c6cb}
+.alert-danger hr{border-top-color:#f1b0b7}
+.alert-danger 
+.alert-link{color:#491217}
+.menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+.menu a{
+    text-decoration: none;
+    height: fit-content;
+    padding: 1%;
+    color: black;
+    color: white;
+}
+.menu a:hover{
+    background-color: var(--color-naranja);
+    color: white;
+    cursor: pointer;
+}
+
+
+.numeroContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100%;
+}
+.numeroContainer:hover{
+    cursor: pointer;  
+}
+
+.numeroContainer:hover > span{
+    animation-name: bell;
+    animation-duration: 1s;
+     animation-iteration-count: infinite; */
+    animation-timing-function: ease-out;
+    font-size: 20px;
+}
+.numeroContainer a{
+    text-decoration: none;
+    color: black
+}
+.numeroContainer span{
+    transform: rotateY(180deg);
+    margin-left: 3px;
+}
+
+.form{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.dataRequest{
+    width: 300px;
+    background-color: rgba(247,247,247, 0.7);
+    
+   
+    border-radius: 10px;
+    height: 450px;
+    margin: 0 60px 60px 0;
+    padding: 20px;
+    box-shadow:3px 5px 33px #888
+}
+.dataRequest h3{
+    margin: 0 auto;
+}
+.dataRequest p{
+    margin: 0 auto;
+    color: var(--gris-descripcion);
+}
+
+.dataRequest:hover, .dataRequest:active > input, textarea{
+    background-color: rgba(255,255,255, 1);
+    color: green;
+    border: 3px solid green;
+    transition: .2s all ease-in-out;
+}
+
+.dataRequest form{
+    display: flex;
+    flex-direction: column;
+}
+.dataRequest label{
+    padding: 5px;
+}
+.dataRequest input{
+  border:1px solid rgba(128, 128, 128, 0.2);
+  padding: var(--paddind-inputs);
+  background-color: rgba(255,255,255, 0.7);
+  font-family: var(--fuente);
+}
+.dataRequest textarea{
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    padding: var(--paddind-inputs);
+    font-family: var(--fuente);
+    background-color: rgba(255,255,255, 0.7);
+}
+#enviar{
+    text-align: center;
+
+    padding: .6em .8em .8em;
+    border: none;
+    color: white;
+    margin: 5px;
+    border-radius: 5px; 
+    cursor: pointer;
+    box-shadow: inset 0 -.2em rgba(0, 0, 0, .2);
+    outline: 0;
+    transition: .1s;
+    will-change: transform; 
+   
+}
+#enviar:active{
+    transform: scale(.8);
+}
+
+#enviar{
+    background: #7dc800;
+}
+
+.contenido{
+    width: 100%;
+    height: 900px;
+}
+.imgFondo{
+
+    background-image: url('../../images/primeraBajada1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+.logosYTema{
+    padding-top:100px; 
+    display: flex;
+    justify-content: space-around;
+}
+.logosYTema img{
+    height:70px;
+}
+.tema{
+display: flex;
+align-items: center;
+}
+.tema p{
+    font-weight: bold;
+    font-size: 30px;
+}
+.modelos{
+    margin-top:50px;
+    display: flex; 
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+    
+}
+.modelo{
+    max-width: var(--tamano-modelos);
+    box-shadow:3px 5px 10px #888;
+    background-color: var(--blanco);
+    border-radius: 7px;
+    overflow: hidden;
+    margin-right: 8px;
+}
+
+.modelo img{
+width: 100%;
+
+}
+.cinta {
+    position:relative;
+    width:300px;
+    height:50px;
+    margin:auto;
+    text-align:center;
+    
+    background-color: var(--verde-hover);
+    
+    background-size: 4px 4px;
+    color: white;
+    top: -20px;
+    }
+   
+
+.descripcionCasa p{
+    color: var(--gris-descripcion);
+    
+}
+.descripcionCasa{
+    padding-left: 5%;
+    padding-right: 5%; 
+}
+
+.descripcionCasa a{
+    text-decoration: none;
+    color: black;
+}
+.descripcionCasa a:hover{
+    color:var(--verde-hover);
+    transition: .2s all ease-in-out;
+    cursor: pointer;
+}
+.grilla{
+    display: grid;
+    grid-template: 20px 40px / 1fr 1fr 1fr ;
+}
+.elemento{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.elemento p{
+margin-top: 15px;
+}
+.iconP span{
+    color: var(--gris-descripcion)
+}
+.iconP p{
+    margin-left: 5px;
+    color: var(--gris-oscuro);
+}
+.espaciador{
+    clear: both;
+}
+.contenido2{
+    width: 100%;
+    height: 900px;
+    
+}
+.grillaComen{
+    display: grid;
+    grid-template: 1fr / 0.65fr 0.35fr ;
+}
+.contenedor{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 50px;
+}
+.grid{
+    
+}
+.testimoniosTema{
+    background-color: var(--verde-hover);
+    color: white;
+    height: 70px;
+    width: 90%;
+    font-size: 16px;
+    padding: 20px;
+    border-radius: 3px;
+   
+}
+.testimoniosTema h3{
+    margin: 0;
+}
+.comentariosCli{
+    background-color: var(--gris-suave);
+    padding: 90px 35px;
+    border-radius: 3px;
+    justify-content: center;
+    text-align: center;
+}
+.comentariosCli h4{
+    font-size: 16px;
+    margin: 10px;
+}
+.comentariosCli h5{
+    color: var(--verde-hover);
+    margin: 10px;
+}
+.comentariosCli p{
+    color: #808080;
+    font-style: oblique;
+}
+.obtenidoCata{
+    padding-left: 20px;
+}
+.obtenidoCata{
+    padding-top: 20px;
+}
+.modeloAd{
+    width: 300px;
+    box-shadow:3px 5px 10px #888;
+    background-color: var(--blanco);
+    border-radius: 7px;
+    overflow: hidden
+}
+.modeloImg img{
+    max-width: 100%;
+    object-fit: cover;
+    
+}
+.cataniaAd{
+    text-align: center;
+}
+@media screen and (max-width:1440px) {}
+
+    @media screen and (max-width:1362px) {
+    .modelo h3{
+        font-size: 16px;
+        }
+        .modelo p{
+            font-size: 14px;
+        }
+        
+        .modelo{
+            max-width: 305px;
+    
+        }
+    }
+    @media screen and (max-width:1043px) {
+        .imgFondo{
+            height: 1200px;
+        }
+        .catania{
+            margin-top: 20px;
+        }
+    }
+    @media screen and (max-width:1024px) {
+
+        .imagePortada{
+            background-position: top;
+            background-color: var(--gris-suave);
+        }    
+    .menu{
+        padding-right: 4px;
+        
+    }
+    .menu div{
+        font-size: 15px;
+        padding: 0%;
+    }
+    .menu a{
+        font-size: 15px;
+    }
+    .form{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+    .dataRequest{
+        width: 300px;  
+        height: 400px;
+        margin: initial;
+        padding: 20px;
+        margin-top: 30px;
+    }
+
+    }
+    
+    @media screen and (max-width:768px) {
+
+    .tema p{
+        font-size: 19px;
+    }
+    .none{
+        display: none;
+    }
+    
+    .portada{
+    
+        width: 100%;
+    
+        height: 75vh;
+    }
+    .form{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: 100%;
+        
+        
+    }
+    .dataRequest{
+        width: 100%;
+        background-color: transparent;
+    
+        background-color: rgba(247,247,247, 1);
+       
+        border-radius: 10px;
+        height: 300px;
+        margin: 0 0 60px 0;
+        padding: 20px;
+        box-shadow:none;
+        }
+    
+    .dataRequest:hover, .dataRequest:active > input, textarea{
+        background-color: rgba(255,255,255, 1);
+        color: green;
+        border: 3px solid green;
+    }
+    
+    .dataRequest form{
+    
+    }
+    .dataRequest label{
+        padding: 5px;
+    }
+    .dataRequest input{
+      border:1px solid rgba(128, 128, 128, 0.2);
+      padding: var(--paddind-inputs);
+      background-color: rgba(255,255,255, 0.7);
+      font-family: var(--fuente);
+    }
+    .dataRequest textarea{
+        border: 1px solid rgba(128, 128, 128, 0.2);
+        padding: var(--paddind-inputs);
+        font-family: var(--fuente);
+        background-color: rgba(255,255,255, 0.7);
+    }
+    
+    .grillaComen{
+        display: grid;
+        grid-template: 1fr / 1fr 0.3fr ;
+    
+    }
+    .comentarios{
+        max-width: 100%;
+    
+    }
+    .adquirido{
+        max-width: 100%;
+    }
+    
+    }
+    
+    @media screen and (max-width:695px) {
+        .imgFondo{
+            height: 1700px;
+        }
+        .modelo{
+            margin-top: 20px;
+        }
+        .contenido2{
+            height: 1000px;
+        }
+        .grillaComen{
+            grid-template: 400px 500px / 1fr;
+            
+        }
+        .adquirido{
+            margin: 0 auto;
+        }
+        .obtenidoCata{
+            margin: 0;
+            margin-top: 50px;
+            text-align: center;
+        }
+        .imgContainer img{
+            max-height: 80%;
+        }
+        .imgContainerPla{
+            height: 80px;
+        }
+        .imgContainerPla img{
+            max-height: 95px;
+            max-width: 80px;
+            
+        }
+        
+    }
+    @media screen and (max-width:630px) {
+        .logosYTema{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .imgFondo{
+            height: 1800px;
+        }
+    
+    }
+    
+    @media screen and (max-width:480px) {
+        .portada{
+    
+            width: 100%;
+    
+            height: 70vh;
+        }
+        
+    }
+
+    @media screen and (max-width:320px) {}
